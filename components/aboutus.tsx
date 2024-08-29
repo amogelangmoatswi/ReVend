@@ -2,15 +2,11 @@ import React from 'react'
 import {
     BookOpenIcon,
     ChevronRightIcon,
-    Import,
     MessagesSquareIcon,
     ThumbsUpIcon,
   } from "lucide-react";
 
 import { Section, Container } from './craft';
-
-
-
 
 const Aboutus = () => {
   return (
@@ -73,7 +69,7 @@ const Aboutus = () => {
               Innovation
             </h3>
             <p className="mt-1 text-gray-500">
-              Our technology takes the hassle out of recycling. With just a few taps on our app, you can track your progress, earn rewards, and see the impact you're making.
+              Our technology takes the hassle out of recycling. With just a few taps on our app, you can track your progress, earn rewards, and see the impact you&apos;re making.
             </p>
           </div>
         </div>
@@ -89,7 +85,7 @@ const Aboutus = () => {
               Customer Engagement
             </h3>
             <p className="mt-1 text-gray-500">
-              We believe recycling should be something you look forward to. Our app keeps you engaged with real-time updates, personalized tips, and rewards, making you feel connected to a community that's driving positive change.
+              We believe recycling should be something you look forward to. Our app keeps you engaged with real-time updates, personalized tips, and rewards, making you feel connected to a community that&apos;s driving positive change.
             </p>
           </div>
         </div>
@@ -99,8 +95,6 @@ const Aboutus = () => {
     </div>
     </Container>
   </Section>
-  
-
   )
 }
 
