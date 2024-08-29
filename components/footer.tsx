@@ -15,13 +15,13 @@ import { Github, Twitter, Facebook } from "lucide-react";
 import { Section, Container } from "./craft";
 
 // Asset imports
-import Logo from "@/public/Revend.png";
+import Logo from "@/public/Revend2.png";
 
 export default function Footer() {
   return (
-    <footer>
+    <footer className=" bg-bgbg">
       <Section>
-        <Container className="grid gap-12 md:grid-cols-[1.5fr_0.5fr_0.5fr]">
+        <Container className="grid gap-12 text-gray-200/90 md:grid-cols-[1.5fr_0.5fr_0.5fr]">
           <div className="not-prose flex flex-col gap-6">
             <Link href="/">
               <h3 className="sr-only">Revend</h3>
@@ -53,15 +53,15 @@ export default function Footer() {
             <Link href="/cookie-policy">Cookie Policy</Link>
           </div>
         </Container>
-        <Container className="not-prose flex flex-col justify-between gap-6 border-t md:flex-row md:items-center md:gap-2">
-          <div className="flex gap-2">
-            <Button variant="outline" size="icon">
-              <Github />
+        <Container className="not-prose flex flex-col text-gray-200 justify-between gap-6 border-t md:flex-row md:items-center md:gap-2">
+          <div className="flex gap-2 ">
+            <Button variant="outline" size="icon" className=" bg-primary">
+              <Github/>
             </Button>
-            <Button variant="outline" size="icon">
+            <Button variant="outline" size="icon" className=" bg-primary">
               <Twitter />
             </Button>
-            <Button variant="outline" size="icon">
+            <Button variant="outline" size="icon" className=" bg-primary">
               <Facebook />
             </Button>
           </div>

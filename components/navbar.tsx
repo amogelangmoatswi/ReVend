@@ -14,7 +14,7 @@ import Image from "next/image";
 export function NavBar() {
     return (
         <div className="flex items-center min-w-full w-full fixed justify-center p-2 z-[50] mt-[1rem]">
-            <div className="flex justify-between w-[80%] border bg-bgcol text-slate-50 relative backdrop-filter backdrop-blur-lg border-white border-opacity-20 rounded-xl p-2 shadow-lg">
+            <div className="flex justify-between w-[80%] border bg-primary text-slate-50 relative backdrop-filter backdrop-blur-lg border-white border-opacity-20 rounded-xl p-2 shadow-lg">
                 <Dialog>
                     <SheetTrigger className="min-[825px]:hidden p-2 transition">
                         <MenuIcon />
@@ -81,7 +81,7 @@ export function NavBar() {
                         <Button variant="ghost">Contact Us</Button>
                     </Link>
 
-                    <Button className=" bg-bggg hover:bg-bghov">Take a Survey</Button>
+                    <Button className=" bg-bggg text-black hover:bg-bghov">Take a Survey</Button>
                   
                 </div>
             </div>

@@ -5,7 +5,7 @@ const DownloadButtons: React.FC = () => {
     <div className="flex justify-center space-x-3">
       <button
         type="button"
-        className="flex items-center justify-center w-40 text-white bg-black h-12 rounded-xl"
+        className="flex items-center justify-center w-40 text-gray-200 bg-black h-12 rounded-xl"
       >
         <div className="mr-2">
           <svg viewBox="0 0 384 512" width="24">
@@ -23,7 +23,7 @@ const DownloadButtons: React.FC = () => {
 
       <button
         type="button"
-        className="flex items-center justify-center w-40 text-white bg-black rounded-lg h-12"
+        className="flex items-center justify-center w-40 text-gray-200 bg-black rounded-lg h-12"
       >
         <div className="mr-2">
           <svg viewBox="30 336.7 120.9 129.2" width="24">

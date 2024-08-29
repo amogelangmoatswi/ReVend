@@ -19,9 +19,14 @@ const config = {
     },
     extend: {
       colors: {
-        bgcol: "#002C15",
-        bggg:"#13CF8A",
-        bghov: "#119564",
+        bgbg:"#011e13",
+        carcolor:"#108554",
+        aboutcolor: "#effef7",
+        fcolo: "#dcdcdc",
+        faqbg:"#dafeef",
+        faqbb: "#43e5a0",
+        bggg:"#d1fae4",
+        bghov: "#a7f3cd",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -62,6 +67,14 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(calc(-100% - var(--gap)))" },
+        },
+        "marquee-vertical": {
+          from: { transform: "translateY(0)" },
+          to: { transform: "translateY(calc(-100% - var(--gap)))" },
+        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -72,6 +85,8 @@ const config = {
         },
       },
       animation: {
+        marquee: "marquee var(--duration) linear infinite",
+        "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },

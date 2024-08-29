@@ -17,10 +17,10 @@ const avatarUrls = [
 
 const Homepage = () => {
   return (
-    <Section className="bg-bgcol pt-8">
+    <Section className="bg-primary pt-8">
       <Container className="min-h-screen grid items-center md:grid-cols-2 md:gap-12">
         <div className="flex text-slate-50 flex-col gap-6 py-8">
-          <h1 className="!my-0 text-5xl">Transforming Recycling into a Rewarding Experience</h1>
+          <h1 className="!my-0 text-4xl mt-4 font-semibold tracking-tight lg:text-balance">Redefining recycling into a cycle of rewards</h1>
 
           <p className="font-light leading-[1.4] opacity-70">
             <Balancer>
