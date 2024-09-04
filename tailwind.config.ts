@@ -67,6 +67,8 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+
+        
         marquee: {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(calc(-100% - var(--gap)))" },

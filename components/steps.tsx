@@ -10,11 +10,11 @@ const Steps = () => {
     <div className="lg:col-span-2">
           <a className="inline-flex w-fit items-center text-xs p-1 border rounded-full font-medium duration-150 hover:bg-gray-100">
       <span className="inline-block text-xs rounded-full px-2 py-1 bg-green-500 text-white">
-      How To
+      How It Works
      </span>
       </a>
             <h1 className="text-4xl mt-4 font-semibold tracking-tight text-gray-900 lg:text-balance">
-            Simple Steps to Earning Rewards
+            Simple Steps to Earning Your Rewards
             </h1>
           </div>
         </div>
@@ -30,7 +30,7 @@ const Steps = () => {
         </StepperItem>
         <StepperItem>
         <StepperStatusIcon status="inactive" />
-        <StepperTitle>Redeem Rewards</StepperTitle>
+        <StepperTitle>Redeem and Manage Rewards</StepperTitle>
         </StepperItem>
         </Stepper> 
         </div>

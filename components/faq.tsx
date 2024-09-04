@@ -70,6 +70,7 @@ const FAQ = () => {
           customer support team.
           </p>
         </div>
+
         
         <div className="not-prose flex flex-col gap-4 py-6 md:mt-6">
           {content.map((item, index) => (

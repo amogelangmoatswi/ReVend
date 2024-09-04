@@ -6,10 +6,8 @@ import Steps from "@/components/steps";
 import FAQ from "@/components/faq";
 import Aboutus from "@/components/aboutus";
 import CTA from "@/components/cta";
-import Feature from "@/components/features";
 import { Testimonials } from "@/components/testimonials";
-
-
+import Features from "@/components/fettest";
 
 
 export default function Home() {
@@ -18,11 +16,12 @@ export default function Home() {
       <Homepage />
       <Aboutus/>
         <Container>
-          <Feature/>
           <Steps/>
+          <Features/>
           <Testimonials/>
           <CTA/>
           <FAQ/>
+          
         </Container>
       <Footer />
     </Main>
