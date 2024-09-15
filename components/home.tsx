@@ -1,17 +1,12 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
 import { Section, Container } from "@/components/craft";
-import { Button } from "@/components/ui/button";
-import Placeholder from "@/public/placeholder.jpg";
+import Placeholder from "@/public/appscren.png";
 import Balancer from "react-wrap-balancer";
-import GravityTextSwap from "@/components/textswap"; // Make sure this import path is correct
-
+import GravityTextSwap from "@/components/textswap";
 import DownloadButtons from "./ui/btn";
 import AvatarCircles from "@/components/magicui/avatar-circles";
-import { motion } from "framer-motion";
-import { Spotlight } from "./ui/spotlight";
 
 const avatarUrls = [
   "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -22,39 +17,40 @@ const avatarUrls = [
 
 const Homepage = () => {
   return (
-    <Section className="bg-primary pt-8">
-      <Container className="min-h-screen grid items-center md:grid-cols-2 md:gap-12">
-        
-        <div className="flex text-slate-50 flex-col gap-6 py-4">
-          <h1 className="!my-0 text-4xl mt-4 font-semibold tracking-tight lg:text-balance">
-            Revolutionizing eco-friendly practices
-            <br />
-            through{' '}
-            <GravityTextSwap
-              textArray={["innovation.", "technology.", "incentives."]}
-              duration={0.9}
-              pauseDuration={2.9}
-              className="inline min-w-[180px] text-4xl font-semibold"
-            />
-          </h1>
-
-          <p className="font-light leading-[1.4] opacity-70">
+    <Section className="bg-primary">
+      <Container className="min-h-[calc(100vh-64px)] flex flex-col justify-center items-center">
+        <div className="max-w-4xl w-full text-center mb-12">
+          <h1 className="text-slate-50 text-4xl sm:text-2xl lg:text-5xl font-bold tracking-tight mb-6">
             <Balancer>
-              With our mobile app, you can track your progress, find nearby machines, and stay 
-              motivated to recycle more. Join us in our mission to create a cleaner planet, one 
-              recycled item at a time.
+              Revolutionizing eco-friendly practices through{' '}
+              <GravityTextSwap
+                textArray={["innovation.", "technology.", "incentives."]}
+                duration={0.9}
+                pauseDuration={2.9}
+                className="inline text-4xl sm:text-5xl lg:text-5xl font-bold text-green-400"
+              />
+            </Balancer>
+          </h1>
+          <p className="text-slate-300 text-lg sm:text-xl lg:text-2xl mb-8 max-w-2xl mx-auto">
+            <Balancer>
+              Track progress, find nearby recycling points, and stay motivated. 
+              Join our mission to create a cleaner planet, one recycled item at a time.
             </Balancer>
           </p>
-          <div className="not-prose flex items-center gap-2">
-            <DownloadButtons/>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8">
+            <DownloadButtons />
           </div>
-          <AvatarCircles numPeople={99} avatarUrls={avatarUrls} />
+          <div className="flex justify-center items-center gap-4">
+            <AvatarCircles numPeople={99} avatarUrls={avatarUrls} />
+            <p className="text-slate-300 text-sm">Join 10,000+ eco-warriors</p>
+          </div>
         </div>
-        <div className="not-prose relative flex h-96 overflow-hidden rounded-lg border">
+        <div className="w-full max-w-2xl">
           <Image
             src={Placeholder}
-            alt="placeholder"
-            className="fill object-cover"
+            alt="ReVend app screenshot"
+            className="w-full h-auto object-contain rounded-lg shadow-xl"
+            priority
           />
         </div>
       </Container>
