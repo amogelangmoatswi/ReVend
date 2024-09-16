@@ -6,6 +6,7 @@ import Balancer from "react-wrap-balancer";
 
 // UI component imports
 import { Button } from "@/components/ui/button";
+import BlurFade from "./magicui/blur-fade";
 
 // Custom components
 import { Section, Container } from "@/components/craft";
@@ -14,9 +15,10 @@ const CTA = () => {
   return (
     <Section>
       <div className="rounded-lg border bg-primary p-6 md:rounded-xl md:p-12">
-       
+      <BlurFade delay={0.25} inView>
      
         <div className="grid items-end grid-cols-1 sm:grid-cols-2 gap-4">
+        
           <div>
             <p className="text-xl lg:text-3xl font-semibold tracking-tight text-gray-200">
             Join the Recycling Revolution
@@ -76,6 +78,7 @@ const CTA = () => {
             </Button>
           </div>
         </div>
+        </BlurFade>
       </div>
     </Section>
   );

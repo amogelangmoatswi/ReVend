@@ -5,7 +5,7 @@ import Link from "next/link";
 // UI component imports
 import * as Craft from "@/components/craft";
 import { Button } from "@/components/ui/button";
-
+import BlurFade from "./magicui/blur-fade";
 import { ArrowUpRight } from "lucide-react";
 
 // UI component imports
@@ -62,6 +62,7 @@ const FAQ = () => {
   return (
     <Craft.Section>
       <div className="grid items-stretch md:grid-cols-2 md:gap-10">
+      <BlurFade delay={0.25} inView>
       <div className="flex flex-col gap-4 py-6">
           <h3 className="!my-0 text-4xl mt-4 font-semibold tracking-tight text-gray-900 
           lg:text-balance">Frequently Asked Questions</h3>
@@ -70,8 +71,9 @@ const FAQ = () => {
           customer support team.
           </p>
         </div>
+        </BlurFade>
 
-        
+        <BlurFade delay={0.25 * 4} inView>
         <div className="not-prose flex flex-col gap-4 py-6 md:mt-6">
           {content.map((item, index) => (
             <Accordion key={index} type="single" collapsible>
@@ -97,6 +99,7 @@ const FAQ = () => {
             </Accordion>
           ))}
         </div>
+        </BlurFade>
       </div>
     </Craft.Section>
   );

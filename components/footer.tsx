@@ -16,11 +16,13 @@ import { Section, Container } from "./craft";
 
 // Asset imports
 import Logo from "@/public/Revend2.png";
+import BlurFade from "./magicui/blur-fade";
 
 export default function Footer() {
   return (
     <footer className=" bg-bgbg">
       <Section>
+      <BlurFade delay={0.25} inView>
         <Container className="grid gap-12 text-gray-200/90 md:grid-cols-[1.5fr_0.5fr_0.5fr]">
           <div className="not-prose flex flex-col gap-6">
             <Link href="/">
@@ -53,6 +55,9 @@ export default function Footer() {
             <Link href="/cookie-policy">Cookie Policy</Link>
           </div>
         </Container>
+        </BlurFade>
+
+        <BlurFade delay={0.25 * 4} inView>
         <Container className="not-prose flex flex-col text-gray-200 justify-between gap-6 border-t md:flex-row md:items-center md:gap-2">
           <div className="flex gap-2 ">
             <Button variant="outline" size="icon" className=" bg-primary">
@@ -71,6 +76,7 @@ export default function Footer() {
             All rights reserved. 2024-present.
           </p>
         </Container>
+        </BlurFade>
       </Section>
     </footer>
   );

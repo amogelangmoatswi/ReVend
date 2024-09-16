@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import Marquee from "@/components/magicui/marquee";
 import { Section } from "./craft";
+import BlurFade from "./magicui/blur-fade";
 
 const reviews = [
   {
@@ -90,6 +91,7 @@ const ReviewCard = ({
 export function Testimonials() {
   return (
     <Section>
+      <BlurFade delay={0.25} inView>
       <div>
       <a className="inline-flex w-fit items-center text-xs p-1 border rounded-full font-medium duration-150 hover:bg-gray-100">
       <span className="inline-block text-xs rounded-full px-2 py-1 bg-green-500 text-white">
@@ -118,6 +120,7 @@ export function Testimonials() {
       <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-background"></div>
       <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-background"></div>
     </div>
+    </BlurFade>
     </Section>
   );
 }

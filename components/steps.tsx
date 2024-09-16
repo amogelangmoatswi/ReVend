@@ -1,23 +1,26 @@
 import React from 'react'
 import { Section, Container } from "@/components/craft";
 import { Stepper,StepperItem,StepperStatusIcon,StepperTitle } from './ui/stepper';
+import BlurFade from './magicui/blur-fade';
 
 const Steps = () => {
   return (
     <Section>
-        
+   <BlurFade delay={0.25} inView>
     <div className="grid grid-cols-1 md:grid-cols-3 md:items-end">
+    
     <div className="lg:col-span-2">
           <a className="inline-flex w-fit items-center text-xs p-1 border rounded-full font-medium duration-150 hover:bg-gray-100">
       <span className="inline-block text-xs rounded-full px-2 py-1 bg-green-500 text-white">
       How It Works
      </span>
-      </a>
+                   </a>
             <h1 className="text-4xl mt-4 font-semibold tracking-tight text-gray-900 lg:text-balance">
             Simple Steps to Earning Your Rewards
             </h1>
-          </div>
-        </div>
+    </div>
+    </div></BlurFade>
+    <BlurFade delay={0.25 * 2} inView>
         <div className='mt-12'>
         <Stepper activeStep={1}>
         <StepperItem>
@@ -34,6 +37,9 @@ const Steps = () => {
         </StepperItem>
         </Stepper> 
         </div>
+        </BlurFade>
+
+        <BlurFade delay={0.25* 4} inView>
         <dl className="grid grid-cols-2 gap-6 lg:grid-cols-3 md:grid-cols-2 mt-12">
           <div className=" bg-bggg rounded-3xl">
             <dt className="tracking-tight text-lg font-medium text-gray-900 p-8">
@@ -60,6 +66,7 @@ const Steps = () => {
             </dd>
           </div>
         </dl>
+        </BlurFade>
       
     </Section>
   )

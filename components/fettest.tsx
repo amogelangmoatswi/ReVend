@@ -4,6 +4,7 @@ import Image, { StaticImageData } from "next/image";
 import Placeholder1 from "@/public/place.png";
 import Placeholder2 from "@/public/place.png";
 import { Chcard } from './chcard';
+import BlurFade from './magicui/blur-fade';
 
 
 type FeatureText = {
@@ -38,6 +39,7 @@ const Features = () => {
     <Section>
       <div className="grid items-stretch md:grid-cols-2 md:gap-10">
         {/* Left Side Content */}
+        <BlurFade delay={0.25} inView>
         <div className="flex flex-col gap-4 py-6">
           <h3 className="!my-0 text-4xl mt-4 font-semibold tracking-tight text-gray-900 lg:text-balance">
             Unveil the Perks of Our App
@@ -46,8 +48,10 @@ const Features = () => {
             Discover how our app makes recycling smarter, easier, and more rewarding.
           </p>
         </div>
+        </BlurFade>
 
         {/* Right Side Cards */}
+        <BlurFade delay={0.25 * 4} inView>
         <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-6">
           {featureText.map(({ title, description, image }, index) => (
             <div
@@ -73,6 +77,7 @@ const Features = () => {
             <Chcard />
           </div>
         </div>
+        </BlurFade>
       </div>
     </Section>
   );

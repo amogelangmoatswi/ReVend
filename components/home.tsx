@@ -7,6 +7,7 @@ import Balancer from "react-wrap-balancer";
 import GravityTextSwap from "@/components/textswap";
 import DownloadButtons from "./ui/btn";
 import AvatarCircles from "@/components/magicui/avatar-circles";
+import BlurFade from "./magicui/blur-fade";
 
 const avatarUrls = [
   "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -20,6 +21,7 @@ const Homepage = () => {
     <Section className="bg-primary">
       <Container className="min-h-[calc(100vh-64px)] flex flex-col justify-center items-center">
         <div className="max-w-4xl w-full text-center mb-12">
+        <BlurFade delay={0.25} inView>
           <h1 className="text-slate-50 text-4xl sm:text-2xl lg:text-5xl font-bold tracking-tight mb-6">
             <Balancer>
               Revolutionizing eco-friendly practices through{' '}
@@ -31,6 +33,8 @@ const Homepage = () => {
               />
             </Balancer>
           </h1>
+          </BlurFade>
+          <BlurFade delay={0.25 * 2} inView>
           <p className="text-slate-300 text-lg sm:text-xl lg:text-2xl mb-8 max-w-2xl mx-auto">
             <Balancer>
               Track progress, find nearby recycling points, and stay motivated. 
@@ -44,7 +48,9 @@ const Homepage = () => {
             <AvatarCircles numPeople={99} avatarUrls={avatarUrls} />
             <p className="text-slate-300 text-sm">Join 10,000+ eco-warriors</p>
           </div>
+          </BlurFade>
         </div>
+        <BlurFade delay={0.25 * 3} inView>
         <div className="w-full max-w-2xl">
           <Image
             src={Placeholder}
@@ -53,6 +59,7 @@ const Homepage = () => {
             priority
           />
         </div>
+        </BlurFade>
       </Container>
     </Section>
   );

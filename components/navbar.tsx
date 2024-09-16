@@ -9,6 +9,7 @@ import { NavigationMenu, NavigationMenuLink, NavigationMenuList } from "./ui/nav
 import { SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "./ui/sheet";
 import Logo from "@/public/Revend2.png";
 import Image from "next/image";
+import BlurFade from "./magicui/blur-fade";
 
 // Debounce function
 function debounce(func: (...args: any[]) => void, wait: number) {
@@ -44,6 +45,7 @@ export function NavBar() {
     }, [prevScrollPos]);
 
     return (
+        
         <div className={`transition-transform duration-500 ease-in-out ${visible ? 'translate-y-0' : '-translate-y-full'} fixed top-0 left-0 right-0 z-[50] py-4 bg-transparent`}>
             <div className="flex justify-center items-center w-full px-4">
                 <div className="flex justify-between items-center w-[86%] max-w-7xl text-slate-50 relative bg-primary border border-white shadow-sm border-opacity-20 rounded-lg p-2">
