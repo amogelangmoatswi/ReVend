@@ -118,9 +118,7 @@ export default function StepperSurvey(): JSX.Element {
       <Card className="w-full max-w-2xl mx-auto shadow-xl rounded-lg">
         <CardHeader className="bg-gradient-to-r rounded-t-lg from-green-500 to-green-900 text-white">
           <CardTitle className="text-2xl font-bold">ReVend Recycling Survey</CardTitle>
-          <CardDescription className="text-green-100">
-  Step {currentStep + 1} of {steps.length}: {steps[currentStep].title.replace("'", "&#39;")}
-</CardDescription>
+          <CardDescription className="text-green-100">Step {currentStep + 1} of {steps.length}: {steps[currentStep].title}</CardDescription>
         </CardHeader>
         <CardContent className="mt-6">
           <Progress value={(currentStep / (steps.length - 1)) * 100} className="w-full mb-6" />
@@ -269,7 +267,7 @@ export default function StepperSurvey(): JSX.Element {
                         'Lack of knowledge about what can be recycled',
                         'Time and effort required',
                         'Not enough financial incentives',
-                        "I don't see the impact of recycling"
+                        'I do not see the impact of recycling'
                       ].map((item) => (
                         <div key={item} className="flex items-center space-x-2">
                           <RadioGroupItem value={item} id={item} />
