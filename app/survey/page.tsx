@@ -118,7 +118,9 @@ export default function StepperSurvey(): JSX.Element {
       <Card className="w-full max-w-2xl mx-auto shadow-xl rounded-lg">
         <CardHeader className="bg-gradient-to-r rounded-t-lg from-green-500 to-green-900 text-white">
           <CardTitle className="text-2xl font-bold">ReVend Recycling Survey</CardTitle>
-          <CardDescription className="text-green-100">Step {currentStep + 1} of {steps.length}: {steps[currentStep].title}</CardDescription>
+          <CardDescription className="text-green-100">
+  Step {currentStep + 1} of {steps.length}: {steps[currentStep].title.replace("'", "&#39;")}
+</CardDescription>
         </CardHeader>
         <CardContent className="mt-6">
           <Progress value={(currentStep / (steps.length - 1)) * 100} className="w-full mb-6" />
