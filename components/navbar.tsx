@@ -1,4 +1,5 @@
 "use client";
+
 import { cn } from "@/lib/utils";
 import { MenuIcon } from 'lucide-react';
 import Link from "next/link";
@@ -13,7 +14,7 @@ import BlurFade from "./magicui/blur-fade";
 
 // Debounce function
 function debounce(func: (...args: any[]) => void, wait: number) {
-    let timeout: ReturnType<typeof setTimeout>; // Correct typing for timeout
+    let timeout: ReturnType<typeof setTimeout>;
     return function executedFunction(...args: any[]) {
         const later = () => {
             clearTimeout(timeout);
@@ -23,7 +24,6 @@ function debounce(func: (...args: any[]) => void, wait: number) {
         timeout = setTimeout(later, wait);
     };
 }
-
 
 export function NavBar() {
     const [visible, setVisible] = React.useState(true);
@@ -37,7 +37,7 @@ export function NavBar() {
 
             setVisible(isScrollingUp || isAtTop);
             setPrevScrollPos(currentScrollPos);
-        }, 80); // 100ms delay
+        }, 80);
 
         window.addEventListener('scroll', handleScroll);
 
@@ -45,7 +45,6 @@ export function NavBar() {
     }, [prevScrollPos]);
 
     return (
-        
         <div className={`transition-transform duration-500 ease-in-out ${visible ? 'translate-y-0' : '-translate-y-full'} fixed top-0 left-0 right-0 z-[50] py-4 bg-transparent`}>
             <div className="flex justify-center items-center w-full px-4">
                 <div className="flex justify-between items-center w-[86%] max-w-7xl text-slate-50 relative bg-primary border border-white shadow-sm border-opacity-20 rounded-lg p-2">
@@ -79,6 +78,11 @@ export function NavBar() {
                                 <DialogClose asChild>
                                     <Link href="#footer">
                                         <Button variant="outline" className="w-full">Contact Us</Button>
+                                    </Link>
+                                </DialogClose>
+                                <DialogClose asChild>
+                                    <Link href="/survey">
+                                        <Button variant="outline" className="w-full">Take a Survey</Button>
                                     </Link>
                                 </DialogClose>
                             </div>
@@ -119,7 +123,9 @@ export function NavBar() {
                         </NavigationMenuList>
                     </NavigationMenu>
                     
-                    <Button className="bg-bggg text-black hover:bg-bghov max-[825px]:hidden">Take a Survey</Button>
+                    <Link href="/survey">
+                        <Button className="bg-bggg text-black hover:bg-bghov max-[825px]:hidden">Take a Survey</Button>
+                    </Link>
                 </div>
             </div>
         </div>
