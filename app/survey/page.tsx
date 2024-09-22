@@ -329,7 +329,7 @@ export default function StepperSurvey(): JSX.Element {
                     {currentStep === 3 && (
                       <>
                         <div className="space-y-4">
-                          <Label className="text-lg">Would you be interested in using ReVend's recycling vending machines?</Label>
+                        <Label className="text-lg">Would you be interested in using ReVend&#39;s recycling vending machines?</Label>
                           <RadioGroup 
                             value={formData.revendInterest} 
                             onValueChange={(value) => handleSingleChoice('revendInterest', value)}
