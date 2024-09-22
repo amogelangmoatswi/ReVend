@@ -8,6 +8,7 @@ import Aboutus from "@/components/aboutus";
 import CTA from "@/components/cta";
 import { Testimonials } from "@/components/testimonials";
 import Features from "@/components/fettest";
+import { RevendPricing } from "@/components/revend-pricing";
 
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
         <Container>
           <Steps/>
           <Features/>
+          <RevendPricing/>
           <Testimonials/>
           <CTA/>
           <FAQ/>

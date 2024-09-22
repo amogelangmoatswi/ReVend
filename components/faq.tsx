@@ -64,9 +64,8 @@ const FAQ = () => {
       <div className="grid items-stretch md:grid-cols-2 md:gap-10">
       <BlurFade delay={0.25} inView>
       <div className="flex flex-col gap-4 py-6">
-          <h3 className="!my-0 text-4xl mt-4 font-semibold tracking-tight text-gray-900 
-          lg:text-balance">Frequently Asked Questions</h3>
-          <p className="text-base font-medium mt-2 text-gray-500">
+          <h3 className="text-3xl sm:text-4xl font-normal text-green-700">Frequently Asked Questions</h3>
+          <p className="text-base sm:text-lg text-gray-600">
           Can&apos;t find the answer you&apos;re looking for? Reach out to our
           customer support team.
           </p>

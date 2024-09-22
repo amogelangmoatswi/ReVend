@@ -41,10 +41,10 @@ const Features = () => {
         {/* Left Side Content */}
         <BlurFade delay={0.25} inView>
         <div className="flex flex-col gap-4 py-6">
-          <h3 className="!my-0 text-4xl mt-4 font-semibold tracking-tight text-gray-900 lg:text-balance">
+          <h3 className="text-3xl sm:text-4xl font-normal text-green-700">
             Unveil the Perks of Our App
           </h3>
-          <p className="text-base font-medium mt-2 text-gray-500">
+          <p className="text-base sm:text-lg text-gray-600">
             Discover how our app makes recycling smarter, easier, and more rewarding.
           </p>
         </div>

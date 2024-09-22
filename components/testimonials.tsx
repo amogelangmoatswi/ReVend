@@ -98,7 +98,7 @@ export function Testimonials() {
       Testimonials
      </span>
       </a>
-        <h2 className="scroll-m-20 border-b mt-3 pb-2 text-4xl font-semibold tracking-tight transition-colors first:mt-0">
+        <h2 className="text-3xl mt-2 sm:text-4xl font-normal text-green-700">
         What Our Users Are Saying
         </h2>
         <p className="text-base font-medium mt-2 text-gray-500">

@@ -15,7 +15,7 @@ const Steps = () => {
       How It Works
      </span>
                    </a>
-            <h1 className="text-4xl mt-4 font-semibold tracking-tight text-gray-900 lg:text-balance">
+            <h1 className="text-3xl mt-2 sm:text-4xl font-normal text-green-700">
             Simple Steps to Earning Your Rewards
             </h1>
     </div>

@@ -27,7 +27,7 @@ const Aboutus: React.FC = () => {
             </BlurFade>
 
             <BlurFade delay={0.25 * 2} inView>
-              <h2 className="scroll-m-20 border-b mt-3 pb-2 text-4xl font-semibold tracking-tight transition-colors first:mt-0">
+              <h2 className="text-3xl mt-2 sm:text-4xl font-normal text-green-700">
                 Pioneers of a Greener Tomorrow
               </h2>
             </BlurFade>
@@ -60,11 +60,11 @@ const Aboutus: React.FC = () => {
             ].map((block, index) => (
               <BlurFade key={block.title} delay={0.25 * (index + 5)} inView>
                 <div className="flex">
-                  <span className="flex-shrink-0 inline-flex justify-center items-center w-[46px] h-[46px] rounded-full border bg-primary text-primary-foreground">
+                  <span className="flex-shrink-0 inline-flex justify-center items-center w-[46px] h-[46px] rounded-full border bg-green-700 text-primary-foreground">
                     <block.icon className="w-5 h-5" />
                   </span>
                   <div className="ms-5 sm:ms-8">
-                    <h3 className="text-base sm:text-lg font-semibold">
+                    <h3 className="text-xl sm:text-2xl font-light mb-2 border-b border-green-200 text-green-700">
                       {block.title}
                     </h3>
                     <p className="mt-1 text-gray-500">

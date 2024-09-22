@@ -20,16 +20,16 @@ const Homepage = () => {
   return (
     <Section className="bg-primary">
       <Container className="min-h-[calc(100vh-64px)] flex flex-col justify-center items-center">
-        <div className="max-w-4xl w-full text-center mb-12">
+        <div className="max-w-4xl w-full text-center mt-20">
         <BlurFade delay={0.25} inView>
-          <h1 className="text-slate-50 text-4xl sm:text-2xl lg:text-5xl font-bold tracking-tight mb-6">
+          <h1 className="text-slate-50 text-4xl sm:text-4xl lg:text-5xl font-medium tracking-tight mb-6">
             <Balancer>
               Revolutionizing eco-friendly practices through{' '}
               <GravityTextSwap
                 textArray={["innovation.", "technology.", "incentives."]}
                 duration={0.9}
                 pauseDuration={2.9}
-                className="inline text-4xl sm:text-5xl lg:text-5xl font-bold text-green-400"
+                className="inline text-4xl sm:text-4xl lg:text-5xl font-medium text-green-400"
               />
             </Balancer>
           </h1>
