@@ -314,7 +314,7 @@ export default function StepperSurvey(): JSX.Element {
                               'Lack of knowledge about what can be recycled',
                               'Time and effort required',
                               'Not enough financial incentives',
-                              'I don\'t see the impact of recycling'
+                              "I dont see the impact of recycling"
                             ].map((item) => (
                               <div key={item} className="flex items-center space-x-2 bg-white rounded-lg p-4 shadow-sm hover:bg-green-50 transition-colors">
                                 <RadioGroupItem value={item} id={item} />
