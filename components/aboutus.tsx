@@ -7,13 +7,14 @@ import {
 } from "lucide-react";
 
 import { Section, Container } from './craft';
+
 import BlurFade from "@/components/magicui/blur-fade";
 
 const Aboutus: React.FC = () => {
   return (
     <Section className="bg-aboutcolor">
       <Container>
-        <div className="grid md:grid-cols-2 gap-4">
+        <div className="grid md:grid-cols-2">
           <div className="lg:w-3/4">
             <BlurFade delay={0.25} inView>
               <a className="inline-flex items-center text-xs gap-x-2 p-1 pr-3 border rounded-full font-medium duration-150 hover:bg-gray-100 whitespace-nowrap">

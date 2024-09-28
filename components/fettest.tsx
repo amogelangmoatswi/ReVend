@@ -1,5 +1,5 @@
 import React from 'react';
-import { Section } from "@/components/craft";
+import { Section, Container } from "@/components/craft";
 import Image, { StaticImageData } from "next/image";
 import Placeholder1 from "@/public/place.png";
 import Placeholder2 from "@/public/place.png";
@@ -37,10 +37,16 @@ const singleFeatureText: FeatureText[] = [
 const Features = () => {
   return (
     <Section>
+      <Container>
       <div className="grid items-stretch md:grid-cols-2 md:gap-10">
         {/* Left Side Content */}
         <BlurFade delay={0.25} inView>
-        <div className="flex flex-col gap-4 py-6">
+        <div className="flex flex-col gap-4">
+        <a className="inline-flex w-fit items-center text-xs p-1 border rounded-full font-medium duration-150 hover:bg-gray-100">
+      <span className="inline-block text-xs rounded-full px-2 py-1 bg-green-500 text-white">
+      Features
+     </span>
+                   </a>
           <h3 className="text-3xl sm:text-4xl font-normal text-green-700">
             Unveil the Perks of Our App
           </h3>
@@ -79,6 +85,7 @@ const Features = () => {
         </div>
         </BlurFade>
       </div>
+      </Container>
     </Section>
   );
 };

@@ -5,7 +5,7 @@ import BlurFade from './magicui/blur-fade';
 
 const Steps = () => {
   return (
-    <Section>
+  <Container>
    <BlurFade delay={0.25} inView>
     <div className="grid grid-cols-1 md:grid-cols-3 md:items-end">
     
@@ -68,7 +68,7 @@ const Steps = () => {
         </dl>
         </BlurFade>
       
-    </Section>
+  </Container>
   )
 }
 

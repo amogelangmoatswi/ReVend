@@ -61,6 +61,7 @@ const content: FAQItem[] = [
 const FAQ = () => {
   return (
     <Craft.Section>
+      <Craft.Container>
       <div className="grid items-stretch md:grid-cols-2 md:gap-10">
       <BlurFade delay={0.25} inView>
       <div className="flex flex-col gap-4 py-6">
@@ -100,6 +101,7 @@ const FAQ = () => {
         </div>
         </BlurFade>
       </div>
+      </Craft.Container>
     </Craft.Section>
   );
 };

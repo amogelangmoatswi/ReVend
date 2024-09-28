@@ -14,6 +14,7 @@ import { Section, Container } from "@/components/craft";
 const CTA = () => {
   return (
     <Section>
+      <Container>
       <div className="rounded-lg border bg-primary p-6 md:rounded-xl md:p-12">
       <BlurFade delay={0.25} inView>
      
@@ -80,6 +81,7 @@ const CTA = () => {
         </div>
         </BlurFade>
       </div>
+      </Container>
     </Section>
   );
 };

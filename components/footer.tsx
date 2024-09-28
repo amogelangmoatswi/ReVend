@@ -1,83 +1,64 @@
-// React and Next.js imports
 import Image from "next/image";
 import Link from "next/link";
-
-// Third-party library imports
-import Balancer from "react-wrap-balancer";
-
-// UI component imports
-import { Button } from "./ui/button";
-
-// Icon imports
 import { Github, Twitter, Facebook } from "lucide-react";
-
-// Local component imports
-import { Section, Container } from "./craft";
-
-// Asset imports
+import { Button } from "./ui/button";
+import { Container } from "./craft";
 import Logo from "@/public/Revend2.png";
-import BlurFade from "./magicui/blur-fade";
 
 export default function Footer() {
   return (
-    <footer className=" bg-bgbg">
-      <Section>
-      <BlurFade delay={0.25} inView>
-        <Container className="grid gap-12 text-gray-200/90 md:grid-cols-[1.5fr_0.5fr_0.5fr]">
-          <div className="not-prose flex flex-col gap-6">
-            <Link href="/">
-              <h3 className="sr-only">Revend</h3>
-              <Image
-                src={Logo}
-                alt="Logo"
-                width={130}
-                height={37.37}
-                className="transition-all hover:opacity-75 dark:invert"
-              ></Image>
-            </Link>
-            <p>
-              <Balancer>
+    <footer className="bg-[#002f1b] text-gray-200 py-8">
+      <Container>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="flex flex-col space-y-4">
+            <Image
+              src={Logo}
+              alt="ReVend Logo"
+              width={100}
+              height={29}
+              className="dark:invert"
+            />
+            <p className="text-sm">
               We are at the forefront of the recycling revolution, offering 
               state-of-the-art vending machines that turn waste into value.
-              </Balancer>
             </p>
           </div>
-          <div className="flex flex-col gap-2">
-            <h5>Website</h5>
-            <Link href="/">About Us</Link>
-            <Link href="/">Features</Link>
-            <Link href="/">Contact Us</Link>
+          <div className="grid grid-cols-2 gap-4 text-sm">
+            <div>
+              <h5 className="font-semibold mb-2">Website</h5>
+              <ul className="space-y-1">
+                <li><Link href="/about">About Us</Link></li>
+                <li><Link href="/features">Features</Link></li>
+                <li><Link href="/contact">Contact Us</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h5 className="font-semibold mb-2">Legal</h5>
+              <ul className="space-y-1">
+                <li><Link href="/privacy">Privacy Policy</Link></li>
+                <li><Link href="/terms">Terms of Service</Link></li>
+                <li><Link href="/cookies">Cookie Policy</Link></li>
+              </ul>
+            </div>
           </div>
-          <div className="flex flex-col gap-2">
-            <h5>Legal</h5>
-            <Link href="/privacy-policy">Privacy Policy</Link>
-            <Link href="/terms-of-service">Terms of Service</Link>
-            <Link href="/cookie-policy">Cookie Policy</Link>
+          <div className="flex flex-col justify-between">
+            <div className="flex space-x-2">
+              <Button variant="outline" size="icon" className="bg-primary w-8 h-8">
+                <Github size={16} />
+              </Button>
+              <Button variant="outline" size="icon" className="bg-primary w-8 h-8">
+                <Twitter size={16} />
+              </Button>
+              <Button variant="outline" size="icon" className="bg-primary w-8 h-8">
+                <Facebook size={16} />
+              </Button>
+            </div>
           </div>
-        </Container>
-        </BlurFade>
-
-        <BlurFade delay={0.25 * 4} inView>
-        <Container className="not-prose flex flex-col text-gray-200 justify-between gap-6 border-t md:flex-row md:items-center md:gap-2">
-          <div className="flex gap-2 ">
-            <Button variant="outline" size="icon" className=" bg-primary">
-              <Github/>
-            </Button>
-            <Button variant="outline" size="icon" className=" bg-primary">
-              <Twitter />
-            </Button>
-            <Button variant="outline" size="icon" className=" bg-primary">
-              <Facebook />
-            </Button>
-          </div>
-          <p className="text-muted-foreground">
-            ©{" "}
-            <a href="/">ReVend</a>.
-            All rights reserved. 2024-present.
-          </p>
-        </Container>
-        </BlurFade>
-      </Section>
+        </div>
+        <div className="mt-8 pt-4 border-t border-gray-700 text-sm text-center">
+          © ReVend. All rights reserved. 2024-present.
+        </div>
+      </Container>
     </footer>
   );
 }

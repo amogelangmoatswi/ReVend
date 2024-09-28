@@ -10,7 +10,6 @@ export function RevendPricing() {
   const [isHovered, setIsHovered] = useState(false)
 
   return (
-    <Section className="bg-white text-gray-800">
       <Container>
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -18,12 +17,21 @@ export function RevendPricing() {
           transition={{ duration: 0.5 }}
           className="mb-12"
         >
-          <h1 className="text-3xl sm:text-4xl font-normal mb-4 text-green-700">
-            Simple, transparent pricing
-          </h1>
-          <p className="text-base sm:text-lg text-gray-600">
-            Transform your business sustainability with ReVend Recycling Machine.
-          </p>
+          <div>
+      <a className="inline-flex w-fit items-center text-xs p-1 border rounded-full font-medium duration-150 hover:bg-gray-100">
+      <span className="inline-block text-xs rounded-full px-2 py-1 bg-green-500 text-white">
+      Pricing
+     </span>
+      </a>
+        <h2 className="text-3xl mt-2 sm:text-4xl font-normal text-green-700">
+        Simple, transparent pricing
+        </h2>
+        <p className="text-base font-medium mt-2 text-gray-500">
+        Transform your business sustainability with ReVend Recycling Machine.
+        </p>
+      </div>
+
+          
         </motion.div>
 
         <div className="flex flex-col lg:flex-row gap-8 mb-16">
@@ -95,7 +103,6 @@ export function RevendPricing() {
           </motion.div>
         </div>
       </Container>
-    </Section>
   )
 }
 

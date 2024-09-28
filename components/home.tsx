@@ -19,7 +19,7 @@ const avatarUrls = [
 const Homepage = () => {
   return (
     <Section className="bg-primary">
-      <Container className="min-h-[calc(100vh-64px)] flex flex-col justify-center items-center">
+      <Container className=" bg-primary min-h-[calc(100vh-64px)] flex flex-col justify-center items-center">
         <div className="max-w-4xl w-full text-center mt-20">
         <BlurFade delay={0.25} inView>
           <h1 className="text-slate-50 text-4xl sm:text-4xl lg:text-5xl font-medium tracking-tight mb-6">

@@ -59,7 +59,7 @@ type SectionProps = {
 
 const Section = ({ children, className, id }: SectionProps) => {
   return (
-    <section className={cn("py-8 md:py-12 lg:py-16 xl:py-20", className)} id={id}>
+    <section className={cn("py-4 md:py-8 lg:py-12 xl:py-16", className)} id={id}>
       {children}
     </section>
   );
@@ -76,7 +76,7 @@ const Container = ({ children, className, id }: ContainerProps) => {
     <div 
       className={cn(
         "mx-auto max-w-7xl", 
-        "p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12", 
+        "p-2 sm:p-4 md:p-4 lg:p-8 xl:p-10", 
         className
       )} 
       id={id}
