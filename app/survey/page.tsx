@@ -150,7 +150,7 @@ export default function StepperSurvey(): JSX.Element {
             </div>
             <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-6">
               <blockquote className="text-lg font-medium mb-2">
-                "ReVend has revolutionized our recycling habits. It's so easy and rewarding!"
+                &quot;ReVend has revolutionized our recycling habits. It&apos;s so easy and rewarding!&quot;
               </blockquote>
               <cite className="text-sm">- Amogelang Moatswi, Eco Enthusiast</cite>
             </div>
@@ -341,7 +341,7 @@ export default function StepperSurvey(): JSX.Element {
                           <>
                             <div className="space-y-4">
                               <div>
-                                <Label className="text-sm font-medium text-gray-700">Would you be interested in using ReVend's recycling vending machines?</Label>
+                                <Label className="text-sm font-medium text-gray-700">Would you be interested in using ReVend&apos;s recycling vending machines?</Label>
                                 <RadioGroup
                                   value={formData.revendInterest}
                                   onValueChange={(value) => handleSelectChange('revendInterest', value)}
@@ -357,7 +357,7 @@ export default function StepperSurvey(): JSX.Element {
                                 {errors.revendInterest && <p className="text-red-500 text-xs mt-1">{errors.revendInterest}</p>}
                               </div>
                               <div>
-                                <Label className="text-sm font-medium text-gray-700">Which features would you like to see in ReVend's app?</Label>
+                                <Label className="text-sm font-medium text-gray-700">Which features would you like to see in ReVend&apos;s app?</Label>
                                 <div className="grid grid-cols-2 gap-2 mt-2">
                                   {['Recycling points tracking', 'Rewards program', 'Educational content', 'Community challenges', 'Location finder', 'Impact visualization'].map((item) => (
                                     <div key={item} className="flex items-center">
