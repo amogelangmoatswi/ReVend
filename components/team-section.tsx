@@ -25,25 +25,25 @@ const TeamMembersComponent = () => {
       name: "TAFADZWA CHIGWADA",
       role: "Software Developer",
       image: "/images/tafa.jpg",
-      featured: true,
+      
     },
     {
       name: "MPHO SETHIBE",
       role: "Business Analyst",
       image: "/images/mpho.jpg",
-      featured: true,
+     
     },
     {
       name: "AMOGELANG MOATSWI",
       role: "UI/UX Designer / Developer",
       image: "/images/moatswi.jpg",
-      featured: true,
+      
     },
     {
       name: "KARABO AGOSI",
       role: "Embedded Systems Engineer",
       image: "/images/karabo.jpg",
-      featured: true,
+      
     },
   ]
 
@@ -56,19 +56,19 @@ const TeamMembersComponent = () => {
               Team
             </span>
           </a>
-          <h3 className="text-3xl sm:text-4xl font-bold text-white">
+          <h3 className="text-2xl sm:text-3xl font-bold text-white">
             Introducing Our Talented Team
           </h3>
-          <p className="text-base sm:text-lg text-gray-300">
+          <p className="text-sm sm:text-base text-gray-300">
             Meet the exceptional individuals behind our success.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-6 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-4 gap-3 md:gap-4">
           {teamMembers.map((member, index) => (
             <div 
               key={index} 
-              className={`relative rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 ${
+              className={`relative rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:scale-105 ${
                 member.featured ? 'md:col-span-2 lg:col-span-1 lg:row-span-2' : ''
               }`}
             >
@@ -77,19 +77,19 @@ const TeamMembersComponent = () => {
                 alt=""
                 className={`w-full object-cover ${
                   member.featured
-                    ? 'h-[240px] sm:h-[320px] md:h-[360px] lg:h-full'
-                    : 'h-[200px] sm:h-[240px]'
+                    ? 'h-[200px] sm:h-[260px] md:h-[280px] lg:h-full'
+                    : 'h-[160px] sm:h-[200px]'
                 } ${!member.featured && !isMobile ? 'grayscale hover:grayscale-0' : ''}`}
               />
               <div 
-                className={`absolute bottom-0 left-0 right-0 p-3 sm:p-4 ${
-                  member.featured ? 'bg-green-500' : 'bg-black/70'
+                className={`absolute bottom-0 left-0 right-0 p-2 sm:p-3 ${
+                  member.featured ? 'bg-green-500' : 'bg-black/60'
                 }`}
               >
-                <h3 className={`text-base sm:text-lg font-bold ${member.featured ? 'text-white' : 'text-white'}`}>
+                <h3 className={`text-sm sm:text-base font-bold ${member.featured ? 'text-white' : 'text-white'}`}>
                   {member.name}
                 </h3>
-                <p className={`text-sm sm:text-base ${member.featured ? 'text-white/60' : 'text-white/60'}`}>
+                <p className={`text-xs sm:text-sm ${member.featured ? 'text-white/60' : 'text-white/60'}`}>
                   {member.role}
                 </p>
               </div>
