@@ -12,7 +12,7 @@ import BlurFade from "@/components/magicui/blur-fade";
 
 const Aboutus: React.FC = () => {
   return (
-    <Section className="bg-aboutcolor">
+    <Section id="about-us" className="bg-aboutcolor">
       <Container>
         <div className="grid md:grid-cols-2">
           <div className="lg:w-3/4">
@@ -35,7 +35,7 @@ const Aboutus: React.FC = () => {
 
             <BlurFade delay={0.25 * 3} inView>
               <p className="text-base font-medium mt-2 text-gray-500">
-                We are at the forefront of the recycling revolution, offering state-of-the-art vending machines that turn waste into value. Our business is built on a foundation of sustainability, innovation, and customer engagement. We aim to make recycling accessible and rewarding for everyone.
+              ReVend is a pioneering startup revolutionizing waste management with innovative technology and seamless accessibility. Our advanced reverse vending machine (RVM) not only identifies and sorts recyclable materials accurately but also rewards users instantly for their eco-friendly actions. By integrating Orange Money, users receive cashless rewards directly to their Orange Money accounts for every item they recycle, combining convenience with sustainability.
               </p>
             </BlurFade>
 

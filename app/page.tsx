@@ -9,6 +9,7 @@ import CTA from "@/components/cta";
 import { Testimonials } from "@/components/testimonials";
 import Features from "@/components/fettest";
 import { RevendPricing } from "@/components/revend-pricing";
+import TeamMembersComponent from "@/components/team-section";
 
 
 export default function Home() {
@@ -16,15 +17,15 @@ export default function Home() {
     <Main>
       <Homepage />
       <Aboutus/>
-        <Container>
+        
           <Steps/>
-          <Features/>
           <RevendPricing/>
           <Testimonials/>
+          <TeamMembersComponent/>
           <CTA/>
           <FAQ/>
-          
-        </Container>
+        
+        
       <Footer />
     </Main>
   );

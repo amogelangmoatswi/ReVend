@@ -60,7 +60,7 @@ const content: FAQItem[] = [
 
 const FAQ = () => {
   return (
-    <Craft.Section>
+    <Craft.Section id="FAQ">
       <Craft.Container>
       <div className="grid items-stretch md:grid-cols-2 md:gap-10">
       <BlurFade delay={0.25} inView>
